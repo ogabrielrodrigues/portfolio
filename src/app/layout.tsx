@@ -12,7 +12,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="notranslate" translate="no">
+      <head>
+        <meta name="google" content="notranslate" />
+      </head>
       <body className={`${space_grotesk.variable} ${open_sans.variable} font-sans`}>
         <Providers>{children}</Providers>
       </body>
