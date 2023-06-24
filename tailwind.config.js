@@ -19,6 +19,16 @@ module.exports = {
       },
       backgroundColor: {
         alpha: 'rgba(0,0,0,0.4);'
+      },
+      screens: {
+        smobile: '320px',
+        mmobile: '375px',
+        lmobile: '425px',
+        tablet: '768px',
+        laptop: '1024px',
+        laptopl: '1440px',
+        desktop: '1920px',
+        desktopl: '2560px'  
       }
     }
   },

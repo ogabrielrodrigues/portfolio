@@ -13,15 +13,16 @@ export default function Home() {
           <span>Scroll down</span>
         </div>
 
-        <div className="flex flex-col gap-4">
-          <span className="max-lg:text-md max-md:text-md text-xl font-medium text-body max-xl:text-lg max-[425px]:pl-4">
+        <div className="flex flex-col items-center justify-center gap-4">
+          <span className="text-md ml-5 self-start font-medium text-body tablet:ml-0 tablet:pr-10 tablet:text-xl desktopl:text-2xl">
             Hi 👋, I am <strong>Gabriel Rodrigues</strong>{' '}
           </span>
-          <h1 className="text-9xl font-bold text-body max-xl:text-8xl max-lg:text-7xl max-md:text-6xl max-[425px]:text-center max-[320px]:text-5xl">
+          <h1 className="text-4xl font-bold text-body lmobile:text-5xl tablet:text-6xl laptop:text-7xl laptopl:text-8xl desktop:text-9xl desktopl:text-[156px]">
             Web Developer
-          </h1>
-          <div className="flex items-center justify-between max-md:flex-col-reverse max-md:gap-10">
-            <div className="flex items-center justify-center gap-2 pl-10 max-md:self-start max-md:pl-0 max-[425px]:self-center">
+          </h1>{' '}
+          <div className="flex flex-col-reverse items-center justify-between gap-6 tablet:gap-10 laptopl:w-full laptopl:flex-row">
+            <div className="flex items-center justify-center gap-2 desktop:pl-10">
+              {' '}
               <Tooltip label="Access my linkedIn">
                 <a
                   href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
@@ -29,7 +30,7 @@ export default function Home() {
                   target="_blank"
                   className="cursor-pointer rounded-full p-3 transition-colors hover:bg-alpha"
                 >
-                  <Linkedin className="h-6 w-6 text-body" />
+                  <Linkedin className="h-6 w-6 text-body desktopl:h-8 desktopl:w-8" />
                 </a>
               </Tooltip>
               <Tooltip label="Access my GitHub">
@@ -39,7 +40,7 @@ export default function Home() {
                   target="_blank"
                   className="cursor-pointer rounded-full p-3 transition-colors hover:bg-alpha"
                 >
-                  <Github className="h-6 w-6 text-body" />
+                  <Github className="h-6 w-6 text-body desktopl:h-8 desktopl:w-8" />
                 </a>
               </Tooltip>
               <Tooltip label="Download my curriculum">
@@ -49,21 +50,21 @@ export default function Home() {
                   target="_blank"
                   className="cursor-pointer rounded-full p-3 transition-colors hover:bg-alpha"
                 >
-                  <FileCheck className="h-6 w-6 text-body" />
+                  <FileCheck className="h-6 w-6 text-body desktopl:h-8 desktopl:w-8" />
                 </a>
               </Tooltip>
             </div>
 
-            <p className="max-lg:text-md max-md:text-md text-xl text-body max-xl:text-lg max-md:self-end max-[425px]:self-center max-[375px]:text-[16px] max-[320px]:text-[14px]">
-              I&apos;m 18 years old and I have 2 years of contact with <br></br>
+            <p className="text-md text-center text-body mmobile:px-2 tablet:px-0 tablet:pl-28 tablet:text-end tablet:text-xl laptopl:pl-0 desktopl:text-2xl">
+              I&apos;m 18 years old and I have 2 years of contact with <br className="hidden tablet:block"></br>
               <strong>Javascript</strong> and the web development tools.
             </p>
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col gap-12 p-10">
-        <h1 className="text-center text-5xl font-bold">My best projects</h1>
-        <div className="grid h-full grid-cols-3 gap-6">
+      <div className="flex w-full flex-col gap-12 p-5 tablet:p-8">
+        <h1 className="text-center text-4xl font-bold">My best projects</h1>
+        <div className="grid h-fit grid-rows-5 gap-2 laptop:grid-cols-2 laptop:grid-rows-none laptop:gap-6 laptopl:grid-cols-3 desktopl:grid-cols-4">
           <Project
             title="Easy bank"
             description="Proposed by FrontEnd Mentor, EasyBank is landing page of a vitual bank using a simple and clean design."
