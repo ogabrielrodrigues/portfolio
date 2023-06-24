@@ -11,8 +11,8 @@ module.exports = {
         body: '#fafafa'
       },
       fontFamily: {
-        sans: 'var(--font-open);',
-        bold: 'var(--font-space);'
+        sans: 'var(--font-open)',
+        bold: 'var(--font-space)'
       },
       backgroundImage: {
         gradient: 'linear-gradient(45deg, #4f46e5, #1e1b4b);'
