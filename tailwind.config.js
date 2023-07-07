@@ -1,9 +1,12 @@
+const { thonUI, thonUIContent } = require('@thonlabs/ui/plugin');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}'
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    thonUIContent()
   ],
   theme: {
     extend: {
@@ -28,9 +31,9 @@ module.exports = {
         laptop: '1024px',
         laptopl: '1440px',
         desktop: '1920px',
-        desktopl: '2560px'  
+        desktopl: '2560px'
       }
     }
   },
-  plugins: []
+  plugins: [thonUI()]
 }

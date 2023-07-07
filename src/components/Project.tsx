@@ -19,7 +19,7 @@ export default function Project({ title, description, screenshotUrl, githubUrl, 
           width={800}
           height={800}
           quality={100}
-          className="h-auto laptop:h-[200px] desktop:h-[350px]"
+          className="h-auto desktop:h-[350px] laptop:h-[200px]"
         />
       </div>
       <div className="flex w-full flex-col gap-8 p-6">
@@ -30,6 +30,7 @@ export default function Project({ title, description, screenshotUrl, githubUrl, 
 
         <div className="flex flex-col gap-4">
           <a
+            translate="no"
             href={githubUrl}
             referrerPolicy="no-referrer"
             target="_blank"

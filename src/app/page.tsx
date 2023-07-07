@@ -3,11 +3,20 @@
 import Project from '@/components/Project'
 import { Tooltip } from '@chakra-ui/react'
 import { FileCheck, Github, Linkedin, Mouse } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <div className="flex w-screen flex-col">
       <div className="relative z-10 flex h-[100vh] w-full items-center justify-center overflow-hidden bg-gradient">
+        <Tooltip label="Visit blog">
+          <div className="absolute right-[5%] top-[5%] cursor-pointer rounded-lg bg-white px-4 py-1 shadow-2xl shadow-black md:text-lg md:font-semibold">
+            <Link href="/blog" className="bg-gradient bg-clip-text text-transparent">
+              Blog
+            </Link>
+          </div>
+        </Tooltip>
+
         <div className="absolute bottom-[10%] flex flex-col items-center justify-center gap-4 p-3 font-semibold text-body">
           <Mouse className="h-6 w-6 animate-bounce" />
           <span>Scroll down</span>
@@ -17,7 +26,7 @@ export default function Home() {
           <span className="text-md ml-5 self-start font-medium text-body tablet:ml-0 tablet:pr-10 tablet:text-xl desktopl:text-2xl">
             Hi 👋, I am <strong>Gabriel Rodrigues</strong>{' '}
           </span>
-          <h1 className="text-4xl font-bold text-body lmobile:text-5xl tablet:text-6xl laptop:text-7xl laptopl:text-8xl desktop:text-9xl desktopl:text-[156px]">
+          <h1 className="text-4xl font-bold text-body tablet:text-6xl desktop:text-9xl lmobile:text-5xl laptop:text-7xl laptopl:text-8xl desktopl:text-[156px]">
             Web Developer
           </h1>{' '}
           <div className="flex flex-col-reverse items-center justify-between gap-6 tablet:gap-10 laptopl:w-full laptopl:flex-row">
@@ -55,7 +64,7 @@ export default function Home() {
               </Tooltip>
             </div>
 
-            <p className="text-md text-center text-body mmobile:px-2 tablet:px-0 tablet:pl-28 tablet:text-end tablet:text-xl laptopl:pl-0 desktopl:text-2xl">
+            <p className="text-md text-center text-body tablet:px-0 tablet:pl-28 tablet:text-end tablet:text-xl mmobile:px-2 laptopl:pl-0 desktopl:text-2xl">
               I&apos;m 18 years old and I have 2 years of contact with <br className="hidden tablet:block"></br>
               <strong>Javascript</strong> and the web development tools.
             </p>

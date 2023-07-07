@@ -7,7 +7,7 @@ const spaceGrotesk = SpaceGrotesk({ subsets: ['latin'], variable: '--font-space'
 
 export const metadata = {
   title: 'Portifolio - Gabriel Rodrigues',
-  description: 'Portifolio from Gabriel Rodriguwes'
+  description: 'Portifolio from Gabriel Rodrigues'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
