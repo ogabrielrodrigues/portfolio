@@ -6,8 +6,8 @@ const openSans = OpenSans({ subsets: ['latin'], variable: '--font-open' })
 const spaceGrotesk = SpaceGrotesk({ subsets: ['latin'], variable: '--font-space' })
 
 export const metadata = {
-  title: 'Portifolio - Gabriel Rodrigues',
-  description: 'Portifolio from Gabriel Rodrigues'
+  title: 'Home',
+  description: 'My Works and Porifilio by Gabriel Rodrigues'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
