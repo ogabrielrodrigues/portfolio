@@ -4,7 +4,7 @@ import '@thonlabs/ui/core/base.css'
 
 import Markdown from '@/components/Markdown'
 import { formatPublishDate } from '@/components/PostPreview'
-import { Metadata, ResolvingMetadata } from 'next'
+import { Metadata } from 'next'
 
 interface PostProps {
   id: string
@@ -38,7 +38,7 @@ function generateDescription(body: string) {
   return finded_subtitle
 }
 
-export async function generateMetadata({ params }: Props, parent?: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const slug = params.slug
 
   const response = await fetch(`https://www.tabnews.com.br/api/v1/contents/ogabrielrodrigues/${slug}`)
