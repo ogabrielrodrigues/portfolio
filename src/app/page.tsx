@@ -68,7 +68,7 @@ export default function Home() {
       </div>
       <div className="flex w-full flex-col gap-12 p-5 tablet:p-8">
         <h1 className="text-center text-4xl font-bold">My best projects</h1>
-        <div className="grid h-fit grid-rows-5 gap-2 laptop:grid-cols-2 laptop:grid-rows-none laptop:gap-6 laptopl:grid-cols-3 desktopl:grid-cols-4">
+        <div className="grid h-fit grid-rows-2 gap-2 2xl:!gap-12 laptop:grid-cols-2 laptop:grid-rows-none laptop:gap-6">
           <Project
             title="Easy bank"
             description="Proposed by FrontEnd Mentor, EasyBank is landing page of a vitual bank using a simple and clean design."
@@ -82,27 +82,6 @@ export default function Home() {
             screenshotUrl="https://raw.githubusercontent.com/ogabrielrodrigues/tip-calculator/main/images/screenshot.png"
             githubUrl="https://github.com/ogabrielrodrigues/tip-calculator"
             websiteUrl="https://tipcalculate.vercel.app/"
-          />
-          <Project
-            title="Multi step subscription"
-            description="Proposed by FrontEnd Mentor, is a 4-step form containing personal, plan and additional information."
-            screenshotUrl="https://raw.githubusercontent.com/ogabrielrodrigues/multi-step-form/main/src/assets/screenshot.png"
-            githubUrl="https://github.com/ogabrielrodrigues/multi-step-form"
-            websiteUrl="https://multistepsform.vercel.app/"
-          />
-          <Project
-            title="IP address tracker"
-            description="Proposed by FrontEnd Mentor, is a page where you can put your ip, the map will go to your location and show your ip information."
-            screenshotUrl="https://raw.githubusercontent.com/ogabrielrodrigues/ip-address-tracker/main/src/assets/screenshot.png"
-            githubUrl="https://github.com/ogabrielrodrigues/ip-address-tracker"
-            websiteUrl="https://myiptracker.vercel.app/"
-          />
-          <Project
-            title="Interactive credit card"
-            description="Proposed by FrontEnd Mentor, is a page where you can put your credit card information and with that the demo cards will be filled with your information."
-            screenshotUrl="https://raw.githubusercontent.com/ogabrielrodrigues/interactive-card/f6f69e175db981c2dfba8fca2222d14625767bec/images/screenshot.png"
-            githubUrl="https://github.com/ogabrielrodrigues/ip-address-tracker"
-            websiteUrl="https://myiptracker.vercel.app/"
           />
         </div>
       </div>

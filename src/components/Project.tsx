@@ -12,14 +12,14 @@ interface ProjectProps {
 export default function Project({ title, description, screenshotUrl, githubUrl, websiteUrl }: ProjectProps) {
   return (
     <div className="h-fit overflow-hidden rounded-lg bg-white pb-4 shadow-xl">
-      <div className="w-full bg-indigo-700 p-4">
+      <div className="w-full bg-indigo-700 p-4 2xl:flex 2xl:items-center 2xl:justify-center">
         <Image
           src={screenshotUrl}
           alt={`${title} Screenshot`}
           width={800}
           height={800}
           quality={100}
-          className="h-auto desktop:h-[350px] laptop:h-[200px]"
+          className="aspect-video"
         />
       </div>
       <div className="flex w-full flex-col gap-8 p-6">
