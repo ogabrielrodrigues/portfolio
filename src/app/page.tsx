@@ -72,16 +72,16 @@ export default function Home() {
           <Project
             title="Easy bank"
             description="Proposed by FrontEnd Mentor, EasyBank is landing page of a vitual bank using a simple and clean design."
-            screenshotUrl="https://raw.githubusercontent.com/ogabrielrodrigues/easybank/main/images/screenshot.png"
+            screenshotUrl="https://raw.githubusercontent.com/ogabrielrodrigues/easybank/main/images/screenshot.svg"
             githubUrl="https://github.com/ogabrielrodrigues/easybank"
-            websiteUrl="https://easybank-roan-two.vercel.app/"
+            websiteUrl="https://easybanktech.vercel.app/"
           />
           <Project
-            title="Splitter - Tip calculator"
+            title="Splitter"
             description="Proposed by FrontEnd Mentor, Tip calculator is great for calculating the tip that you and your table companions want to give to the waiter in a restaurant."
-            screenshotUrl="https://raw.githubusercontent.com/ogabrielrodrigues/tip-calculator/main/images/screenshot.png"
-            githubUrl="https://github.com/ogabrielrodrigues/tip-calculator"
-            websiteUrl="https://tipcalculate.vercel.app/"
+            screenshotUrl="https://raw.githubusercontent.com/ogabrielrodrigues/splitter/main/images/screenshot.svg"
+            githubUrl="https://github.com/ogabrielrodrigues/splitter"
+            websiteUrl="https://splittertip.vercel.app/"
           />
         </div>
       </div>
