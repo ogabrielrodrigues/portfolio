@@ -1,22 +1,23 @@
 import { Providers } from '@/components/Providers'
-import { Open_Sans as OpenSans, Space_Grotesk as SpaceGrotesk } from 'next/font/google'
+import { Inter, Space_Grotesk as SpaceGrotesk } from 'next/font/google'
 import './globals.css'
+import { ReactNode } from 'react'
 
-const openSans = OpenSans({ subsets: ['latin'], variable: '--font-open' })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const spaceGrotesk = SpaceGrotesk({ subsets: ['latin'], variable: '--font-space' })
 
 export const metadata = {
-  title: 'Home',
-  description: 'My Works and Porifilio by Gabriel Rodrigues'
+  title: 'Gabriel Rodrigues',
+  description: 'Portfolio from Gabriel Rodrigues'
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="notranslate" translate="no">
       <head>
         <meta name="google" content="notranslate" />
       </head>
-      <body className={`${spaceGrotesk.variable} ${openSans.variable} flex font-sans`}>
+      <body className={`${spaceGrotesk.variable} ${inter.variable} flex font-sans`}>
         <Providers>{children}</Providers>
       </body>
     </html>

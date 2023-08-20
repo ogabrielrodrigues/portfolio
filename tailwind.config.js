@@ -1,4 +1,4 @@
-const { thonUI, thonUIContent } = require('@thonlabs/ui/plugin');
+const { thonUI, thonUIContent } = require('@thonlabs/ui/plugin')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
         body: '#fafafa'
       },
       fontFamily: {
-        sans: 'var(--font-open)',
+        sans: 'var(--font-inter)',
         bold: 'var(--font-space)'
       },
       backgroundImage: {

@@ -66,3 +66,5 @@ export default async function Post({ params }: Props) {
     </div>
   )
 }
+
+export const revalidate = 3600

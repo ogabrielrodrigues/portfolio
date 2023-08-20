@@ -18,14 +18,13 @@ export default function Home() {
 
           <div className="flex flex-col items-center justify-center gap-4">
             <span className="text-md ml-5 self-start font-medium text-body tablet:ml-0 tablet:pr-10 tablet:text-xl desktopl:text-2xl">
-              Hi 👋, I am <strong>Gabriel Rodrigues</strong>{' '}
+              Hello 👋, I&apos;m Gabriel Rodrigues
             </span>
             <h1 className="text-4xl font-bold text-body tablet:text-6xl desktop:text-9xl lmobile:text-5xl laptop:text-7xl laptopl:text-8xl desktopl:text-[156px]">
               Web Developer
-            </h1>{' '}
+            </h1>
             <div className="flex flex-col-reverse items-center justify-between gap-6 tablet:gap-10 laptopl:w-full laptopl:flex-row">
               <div className="flex items-center justify-center gap-2 desktop:pl-10">
-                {' '}
                 <Tooltip label="Access my linkedIn">
                   <a
                     href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
@@ -60,7 +59,7 @@ export default function Home() {
 
               <p className="text-md text-center text-body tablet:px-0 tablet:pl-28 tablet:text-end tablet:text-xl mmobile:px-2 laptopl:pl-0 desktopl:text-2xl">
                 I&apos;m 18 years old and I have 2 years of contact with <br className="hidden tablet:block"></br>
-                <strong>Javascript</strong> and the web development tools.
+                Javascript and the web development tools.
               </p>
             </div>
           </div>
