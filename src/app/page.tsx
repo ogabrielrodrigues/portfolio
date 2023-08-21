@@ -1,26 +1,25 @@
-'use client'
-
-import Header from '@/components/Header'
 import Project from '@/components/Project'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/Tooltip'
 import { FileCheck, Github, Linkedin, Mouse } from 'lucide-react'
+import Image from 'next/image'
+import logo from '../assets/logo.svg'
 
-export default function Home() {
+export default function Root() {
   return (
     <div className="flex w-screen flex-col">
-      <div className="relative bg-gradient">
-        <Header home />
-        <div className="relative z-10 flex h-[99vh] w-full flex-col items-center justify-center overflow-hidden">
-          <div className="absolute bottom-[10%] flex flex-col items-center justify-center gap-4 p-3 font-semibold text-body">
+      <div className="relative bg-gradient-to-tr from-primary to-secondary">
+        <Image src={logo} alt="Gabriel Rodrigues logo" className="absolute left-1/2 top-4 z-50 -translate-x-1/2" />
+        <div className="relative z-10 flex h-screen w-full flex-col items-center justify-center overflow-hidden">
+          <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 flex-col items-center justify-center gap-4 text-body">
             <Mouse className="h-6 w-6 animate-bounce" />
             <span>Scroll down</span>
           </div>
 
           <div className="flex flex-col items-center justify-center gap-4">
-            <span className="text-md ml-5 self-start font-medium text-body tablet:ml-0 tablet:pr-10 tablet:text-xl desktopl:text-2xl">
+            <span className="text-md ml-5 self-start text-body tablet:ml-0 tablet:pr-10 tablet:text-xl desktopl:text-2xl">
               Hello 👋, I&apos;m Gabriel Rodrigues
             </span>
-            <h1 className="text-4xl font-bold text-body tablet:text-6xl desktop:text-9xl lmobile:text-5xl laptop:text-7xl laptopl:text-8xl desktopl:text-[156px]">
+            <h1 className="text-4xl font-bold text-body lmobile:text-5xl tablet:text-6xl laptop:text-7xl laptopl:text-8xl desktop:text-9xl desktopl:text-[156px]">
               Web Developer
             </h1>
             <div className="flex flex-col-reverse items-center justify-between gap-6 tablet:gap-10 laptopl:w-full laptopl:flex-row">
@@ -74,7 +73,7 @@ export default function Home() {
                 </TooltipProvider>
               </div>
 
-              <p className="text-md text-center text-body tablet:px-0 tablet:pl-28 tablet:text-end tablet:text-xl mmobile:px-2 laptopl:pl-0 desktopl:text-2xl">
+              <p className="text-md text-center text-body mmobile:px-2 tablet:px-0 tablet:pl-28 tablet:text-end tablet:text-xl laptopl:pl-0 desktopl:text-2xl">
                 I&apos;m 18 years old and I have 2 years of contact with <br className="hidden tablet:block"></br>
                 Javascript and the web development tools.
               </p>
@@ -84,7 +83,7 @@ export default function Home() {
       </div>
       <div className="flex w-full flex-col gap-12 p-5 tablet:p-8">
         <h1 className="text-center text-4xl font-bold">My best projects</h1>
-        <div className="grid h-fit grid-rows-2 gap-2 2xl:!gap-12 laptop:grid-cols-2 laptop:grid-rows-none laptop:gap-6">
+        <div className="grid h-fit grid-rows-2 gap-2 laptop:grid-cols-2 laptop:grid-rows-none laptop:gap-6 2xl:!gap-12">
           <Project
             title="Easy bank"
             description="Proposed by FrontEnd Mentor, EasyBank is landing page of a vitual bank using a simple and clean design."
