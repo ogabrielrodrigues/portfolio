@@ -1,5 +1,4 @@
 const { thonUI, thonUIContent } = require('@thonlabs/ui/plugin')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -35,5 +34,5 @@ module.exports = {
       }
     }
   },
-  plugins: [thonUI()]
+  plugins: [thonUI(), require('tailwindcss-animate')]
 }

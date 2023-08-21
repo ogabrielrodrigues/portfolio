@@ -2,7 +2,7 @@
 
 import Header from '@/components/Header'
 import Project from '@/components/Project'
-import { Tooltip } from '@chakra-ui/react'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/Tooltip'
 import { FileCheck, Github, Linkedin, Mouse } from 'lucide-react'
 
 export default function Home() {
@@ -25,36 +25,53 @@ export default function Home() {
             </h1>
             <div className="flex flex-col-reverse items-center justify-between gap-6 tablet:gap-10 laptopl:w-full laptopl:flex-row">
               <div className="flex items-center justify-center gap-2 desktop:pl-10">
-                <Tooltip label="Access my linkedIn">
-                  <a
-                    href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
-                    rel="noreferrer"
-                    target="_blank"
-                    className="cursor-pointer rounded-full p-3 transition-colors hover:bg-alpha"
-                  >
-                    <Linkedin className="h-6 w-6 text-body desktopl:h-8 desktopl:w-8" />
-                  </a>
-                </Tooltip>
-                <Tooltip label="Access my GitHub">
-                  <a
-                    href={process.env.NEXT_PUBLIC_GITHUB_URL}
-                    rel="noreferrer"
-                    target="_blank"
-                    className="cursor-pointer rounded-full p-3 transition-colors hover:bg-alpha"
-                  >
-                    <Github className="h-6 w-6 text-body desktopl:h-8 desktopl:w-8" />
-                  </a>
-                </Tooltip>
-                <Tooltip label="Download my curriculum">
-                  <a
-                    href={process.env.NEXT_PUBLIC_CURRICULUM_URL}
-                    rel="noreferrer"
-                    target="_blank"
-                    className="cursor-pointer rounded-full p-3 transition-colors hover:bg-alpha"
-                  >
-                    <FileCheck className="h-6 w-6 text-body desktopl:h-8 desktopl:w-8" />
-                  </a>
-                </Tooltip>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <a
+                        href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
+                        rel="noreferrer"
+                        target="_blank"
+                        className="cursor-pointer rounded-full p-3 transition-colors hover:bg-alpha"
+                      >
+                        <Linkedin className="h-6 w-6 text-body transition-transform desktopl:h-8 desktopl:w-8" />
+                      </a>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Access my linkedIn</p>
+                    </TooltipContent>
+                  </Tooltip>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <a
+                        href={process.env.NEXT_PUBLIC_GITHUB_URL}
+                        rel="noreferrer"
+                        target="_blank"
+                        className="cursor-pointer rounded-full p-3 transition-colors hover:bg-alpha"
+                      >
+                        <Github className="h-6 w-6 text-body desktopl:h-8 desktopl:w-8" />
+                      </a>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Access my GitHub</p>
+                    </TooltipContent>
+                  </Tooltip>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <a
+                        href={process.env.NEXT_PUBLIC_CURRICULUM_URL}
+                        rel="noreferrer"
+                        target="_blank"
+                        className="cursor-pointer rounded-full p-3 transition-colors hover:bg-alpha"
+                      >
+                        <FileCheck className="h-6 w-6 text-body desktopl:h-8 desktopl:w-8" />
+                      </a>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Download my curriculum</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
               </div>
 
               <p className="text-md text-center text-body tablet:px-0 tablet:pl-28 tablet:text-end tablet:text-xl mmobile:px-2 laptopl:pl-0 desktopl:text-2xl">
