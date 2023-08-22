@@ -1,4 +1,3 @@
-import { t } from 'i18next'
 import { ArrowUpRight, Github } from 'lucide-react'
 import Image from 'next/image'
 
