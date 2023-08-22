@@ -18,7 +18,7 @@ const spaceGrotesk = SpaceMono({ subsets: ['latin'], weight: ['700'], variable: 
 export default function RootLayout({ children }: RootProps) {
   return (
     <html lang="pt_BR">
-      <body className={cn(spaceGrotesk.variable, inter.variable, 'flex font-sans antialiased')}>{children}</body>
+      <body className={cn(spaceGrotesk.variable, inter.variable, 'font-sans antialiased')}>{children}</body>
     </html>
   )
 }

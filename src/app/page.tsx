@@ -7,7 +7,7 @@ import logo from '../assets/logo.svg'
 export default function Root() {
   return (
     <div className="flex w-screen flex-col">
-      <div className="relative bg-gradient-to-tr from-primary to-secondary">
+      <section className="relative bg-gradient-to-tr from-primary to-secondary">
         <Image src={logo} alt="Gabriel Rodrigues logo" className="absolute left-1/2 top-4 z-50 -translate-x-1/2" />
         <div className="relative z-10 flex h-screen w-full flex-col items-center justify-center overflow-hidden">
           <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 flex-col items-center justify-center gap-4 text-body">
@@ -15,10 +15,10 @@ export default function Root() {
             <span>Scroll down</span>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-4">
-            <span className="text-md ml-5 self-start text-body tablet:ml-0 tablet:pr-10 tablet:text-xl desktopl:text-2xl">
+          <main className="flex flex-col items-center justify-center gap-4">
+            <p className="text-md ml-5 self-start text-body tablet:ml-0 tablet:pr-10 tablet:text-xl desktopl:text-2xl">
               Hello 👋, I&apos;m Gabriel Rodrigues
-            </span>
+            </p>
             <h1 className="text-4xl font-bold text-body lmobile:text-5xl tablet:text-6xl laptop:text-7xl laptopl:text-8xl desktop:text-9xl desktopl:text-[156px]">
               Web Developer
             </h1>
@@ -78,12 +78,12 @@ export default function Root() {
                 Javascript and the web development tools.
               </p>
             </div>
-          </div>
+          </main>
         </div>
-      </div>
-      <div className="flex w-full flex-col gap-12 p-5 tablet:p-8">
-        <h1 className="text-center text-4xl font-bold">My best projects</h1>
-        <div className="grid h-fit grid-rows-2 gap-2 laptop:grid-cols-2 laptop:grid-rows-none laptop:gap-6 2xl:!gap-12">
+      </section>
+      <section className="flex w-full flex-col gap-12 bg-body p-5 tablet:p-8">
+        <h1 className="text-center text-4xl font-bold text-zinc-950">My best projects</h1>
+        <div className="mx-auto grid w-full grid-rows-2 gap-4 tablet:w-4/5 laptop:w-full laptop:grid-cols-3 laptop:grid-rows-none laptop:gap-6 laptopl:w-3/4 laptopl:grid-cols-3 2xl:!gap-12">
           <Project
             title="Easy bank"
             description="Proposed by FrontEnd Mentor, EasyBank is landing page of a vitual bank using a simple and clean design."
@@ -98,8 +98,15 @@ export default function Root() {
             githubUrl="https://github.com/ogabrielrodrigues/splitter"
             websiteUrl="https://splittertip.vercel.app/"
           />
+          <Project
+            title="EnvGuard"
+            description="Envguard is a solution to centralize and protect your environment secrets so you don't forget or lose them."
+            screenshotUrl="https://raw.githubusercontent.com/ogabrielrodrigues/envguard/main/.github/assets/hero.svg"
+            githubUrl="https://github.com/ogabrielrodrigues/envguard"
+            websiteUrl="https://envguard.vercel.app/"
+          />
         </div>
-      </div>
+      </section>
     </div>
   )
 }

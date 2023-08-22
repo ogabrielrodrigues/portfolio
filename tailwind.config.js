@@ -10,7 +10,10 @@ module.exports = {
       colors: {
         body: '#fafafa',
         primary: '#4f46e5',
-        secondary: '#1e1b4b'
+        secondary: '#1e1b4b',
+        black: '#09090B',
+        medium: '#18181b',
+        light: '#71717a'
       },
       fontFamily: {
         sans: 'var(--font-inter)',
