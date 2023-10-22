@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 import './globals.css'
 
 export const metadata = {
-  title: 'Gabriel Rodrigues',
+  title: 'Portfolio | Gabriel Rodrigues',
   description: 'Portfolio by Gabriel Rodrigues'
 }
 

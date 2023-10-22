@@ -40,10 +40,10 @@ export default async function Root() {
           </div>
 
           <main className="flex flex-col items-center justify-center gap-4">
-            <p className="text-md ml-5 self-start text-body tablet:ml-0 tablet:pl-4 tablet:pr-10 tablet:text-xl desktopl:text-2xl">
+            <p className="text-md ml-5 self-start text-body tablet:ml-0 tablet:pl-4 tablet:pr-10 tablet:text-xl laptopl:px-0 desktopl:text-2xl">
               Olá 👋, sou Gabriel Rodrigues
             </p>
-            <h1 className="text-center text-4xl font-bold text-body mmobile:px-2 lmobile:text-5xl tablet:text-6xl laptop:text-7xl laptopl:text-8xl desktop:text-9xl desktopl:text-[156px]">
+            <h1 className="text-center text-4xl font-bold text-body mmobile:px-2 lmobile:text-5xl tablet:text-6xl laptop:text-7xl laptopl:px-0 laptopl:text-[112px] desktop:text-9xl desktopl:text-[156px]">
               Desenvolvedor Web
             </h1>
             <div className="flex flex-col-reverse items-center justify-between gap-6 tablet:gap-10 laptopl:w-full laptopl:flex-row">
@@ -97,8 +97,9 @@ export default async function Root() {
                 </TooltipProvider>
               </div>
 
-              <p className="text-md text-center text-body mmobile:px-2 tablet:px-0 tablet:pl-28 tablet:pr-4 tablet:text-end tablet:text-xl laptopl:max-w-[750px] laptopl:pl-0 desktopl:text-2xl">
-                Tenho 18 anos e possuo 2 anos de contato com Javascript e as ferramentas de desenvolvimento web.
+              <p className="text-md text-center text-body mmobile:px-2 tablet:px-0 tablet:pl-28 tablet:pr-4 tablet:text-end tablet:text-xl laptopl:max-w-[750px] laptopl:px-0 desktopl:text-2xl">
+                Tenho 18 anos, sou técnico em Desenvolvimento de Sistemas e minhas experiências englobam NodeJS, React e
+                GoLang.
               </p>
             </div>
           </main>
