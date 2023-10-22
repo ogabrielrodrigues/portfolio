@@ -7,10 +7,9 @@ interface ProjectProps {
   screenshotUrl: string
   githubUrl: string
   websiteUrl: string
-  view: string
 }
 
-export default function Project({ title, description, screenshotUrl, githubUrl, websiteUrl, view }: ProjectProps) {
+export default function Project({ title, description, screenshotUrl, githubUrl, websiteUrl }: ProjectProps) {
   return (
     <div className="overflow-hidden rounded-md border border-zinc-200 bg-body">
       <a referrerPolicy="no-referrer" target="_blank" rel="noreferrer" href={githubUrl} className="cursor-pointer">
@@ -42,7 +41,7 @@ export default function Project({ title, description, screenshotUrl, githubUrl, 
             className="flex items-center gap-1 font-semibold text-indigo-700 hover:underline"
           >
             <ArrowUpRight />
-            {view}
+            Ver Site
           </a>
         </div>
       </div>

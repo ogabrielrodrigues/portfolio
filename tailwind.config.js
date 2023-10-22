@@ -16,8 +16,8 @@ module.exports = {
         light: '#71717a'
       },
       fontFamily: {
-        sans: 'var(--font-inter)',
-        bold: 'var(--font-space)'
+        sans: 'var(--font-body)',
+        bold: 'var(--font-mono)'
       },
       backgroundColor: {
         alpha: 'rgba(0,0,0,0.4);'

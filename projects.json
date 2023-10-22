@@ -1,0 +1,18 @@
+[
+  {
+    "view": "Ver Site",
+    "title": "Easy bank",
+    "description": "Proposto pelo FrontEnd Mentor, o EasyBank é uma landing page de um banco virtual com um design moderno e clean.",
+    "screenshotUrl":"https://raw.githubusercontent.com/ogabrielrodrigues/easybank/main/images/screenshot.svg",
+    "githubUrl":"https://github.com/ogabrielrodrigues/easybank",
+    "websiteUrl":"https://easybanktech.vercel.app/"
+  },
+  {
+    "view": "Ver Site",
+    "title": "Splitter",
+    "description": "Proposto pelo FrontEnd Mentor, o Splitter é ótimo para calcular a gorjeta que você e seus companheiros de mesa querem dar ao garçom de um restaurante.",
+    "screenshotUrl":"https://raw.githubusercontent.com/ogabrielrodrigues/splitter/main/images/screenshot.svg",
+    "githubUrl":"https://github.com/ogabrielrodrigues/splitter",
+    "websiteUrl":"https://splittertip.vercel.app/"
+  }
+]
