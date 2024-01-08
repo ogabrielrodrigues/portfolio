@@ -15,10 +15,10 @@ export default function Project({ title, description, screenshotUrl, githubUrl, 
       <a referrerPolicy="no-referrer" target="_blank" rel="noreferrer" href={githubUrl} className="cursor-pointer">
         <Image src={screenshotUrl} alt={`${title} Screenshot`} width={800} height={800} quality={100} />
       </a>
-      <div className="grid grid-rows-[160px_max-content] gap-8 px-4 py-6">
+      <div className="grid grid-rows-[min-content_max-content] gap-8 px-4 py-6">
         <div>
           <h2 className="text-2xl font-bold text-zinc-950">{title}</h2>
-          <p className="min-h-[100px] text-light">{description}</p>
+          <p className="min-h-[150px] text-light">{description}</p>
         </div>
 
         <div className="flex h-max flex-1 flex-col gap-4">

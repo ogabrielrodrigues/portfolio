@@ -1,17 +1,15 @@
 [
   {
-    "view": "Ver Site",
-    "title": "Easy bank",
-    "description": "Proposto pelo FrontEnd Mentor, o EasyBank é uma landing page de um banco virtual com um design moderno e clean.",
-    "screenshotUrl":"https://raw.githubusercontent.com/ogabrielrodrigues/easybank/main/images/screenshot.svg",
-    "githubUrl":"https://github.com/ogabrielrodrigues/easybank",
-    "websiteUrl":"https://easybanktech.vercel.app/"
+    "title": "Hackaton Minerva",
+    "description": "Um desafio proposto no BrutoHacka 2023, que consiste em uma plataforma onde os colaboradores podem deixar suas sugestões, ideias e reclamações. E com isso os administradores daquela unidade operacional podem responder esses feedbacks.",
+    "screenshotUrl":"https://raw.githubusercontent.com/ogabrielrodrigues/hackaton_minerva/main/.github/minerva.svg",
+    "githubUrl":"https://github.com/ogabrielrodrigues/hackaton_minerva",
+    "websiteUrl":"https://minervafeedback.vercel.app/"
   },
   {
-    "view": "Ver Site",
     "title": "Splitter",
     "description": "Proposto pelo FrontEnd Mentor, o Splitter é ótimo para calcular a gorjeta que você e seus companheiros de mesa querem dar ao garçom de um restaurante.",
-    "screenshotUrl":"https://raw.githubusercontent.com/ogabrielrodrigues/splitter/main/images/screenshot.svg",
+    "screenshotUrl":"https://raw.githubusercontent.com/ogabrielrodrigues/splitter/main/images/splitter.svg",
     "githubUrl":"https://github.com/ogabrielrodrigues/splitter",
     "websiteUrl":"https://splittertip.vercel.app/"
   }

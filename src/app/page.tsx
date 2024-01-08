@@ -22,9 +22,7 @@ export default async function Root() {
 
     projects = JSON.parse(data.toString())
   } else {
-    const res = await fetch(process.env.PROJECTS_URL!, {
-      method: 'get'
-    })
+    const res = await fetch(process.env.PROJECTS_URL!)
 
     projects = await res.json()
   }
@@ -32,7 +30,6 @@ export default async function Root() {
   return (
     <div className="flex w-screen flex-col">
       <section className="relative bg-gradient-to-tr from-primary to-secondary">
-        {/* <Image src={logo} alt="Gabriel Rodrigues logo" className="absolute left-1/2 top-4 z-50 -translate-x-1/2" /> */}
         <div className="relative z-10 flex h-screen w-full flex-col items-center justify-center overflow-hidden">
           <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 flex-col items-center justify-center gap-4 text-body">
             <Mouse className="h-6 w-6 animate-bounce" />
