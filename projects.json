@@ -12,5 +12,11 @@
     "screenshotUrl":"https://raw.githubusercontent.com/ogabrielrodrigues/splitter/main/images/splitter.svg",
     "githubUrl":"https://github.com/ogabrielrodrigues/splitter",
     "websiteUrl":"https://splittertip.vercel.app/"
-  }
+  },
+  {
+    "title": "Expert Notes",
+    "description": "Desenvolvido durante o NLW Expert 2024, Expert Notes é uma aplicação onde o usuário pode escrever suas notas, ou gravar um áudio e o site ficará encarregado de transcrever a gravação para texto",
+    "screenshotUrl":"https://raw.githubusercontent.com/ogabrielrodrigues/nlw-expert/main/expert-notes/.github/expert-notes.svg",
+    "githubUrl":"https://github.com/ogabrielrodrigues/nlw-expert/tree/main/expert-notes",
+    "websiteUrl":"https://notesexpert.vercel.app/"
 ]
