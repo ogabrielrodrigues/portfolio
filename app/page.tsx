@@ -2,10 +2,29 @@ import { FileCheck, Github, Linkedin, Mouse } from 'lucide-react'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/tooltip'
 import Project from '@/components/project'
 import { cn } from '@/lib/utils'
-import { readProjects } from '@/lib/read-projects'
+import { readFile } from 'fs/promises'
+import { resolve } from 'path'
+
+interface Projects {
+  title: string
+  description: string
+  screenshot_url: string
+  github_url: string
+  website_url: string
+}
 
 export default async function RootPage() {
-  const projects = await readProjects()
+  let projects: Projects[]
+
+  if (process.env.NODE_ENV === 'development') {
+    const data = await readFile(resolve('projects.json'))
+
+    projects = JSON.parse(data.toString())
+  } else {
+    const res = await fetch(process.env.PROJECTS_URL!)
+
+    projects = await res.json()
+  }
 
   return (
     <div className="flex w-screen flex-col">
