@@ -2,22 +2,22 @@
   {
     "title": "Hackaton Minerva",
     "description": "Um desafio proposto no BrutoHacka 2023, que consiste em uma plataforma onde os colaboradores podem deixar suas sugestões, ideias e reclamações. E com isso os administradores daquela unidade operacional podem responder esses feedbacks.",
-    "screenshot_url":"https://raw.githubusercontent.com/ogabrielrodrigues/hackaton_minerva/main/.github/minerva.svg",
-    "github_url":"https://github.com/ogabrielrodrigues/hackaton_minerva",
-    "website_url":"https://minervafeedback.vercel.app/"
+    "screenshot_url": "https://raw.githubusercontent.com/ogabrielrodrigues/hackaton_minerva/main/.github/minerva.svg",
+    "github_url": "https://github.com/ogabrielrodrigues/hackaton_minerva",
+    "website_url": "https://minervafeedback.vercel.app/"
   },
   {
     "title": "Splitter",
     "description": "Proposto pelo FrontEnd Mentor, o Splitter é ótimo para calcular a gorjeta que você e seus companheiros de mesa querem dar ao garçom de um restaurante.",
-    "screenshot_url":"https://raw.githubusercontent.com/ogabrielrodrigues/splitter/main/images/splitter.svg",
-    "github_url":"https://github.com/ogabrielrodrigues/splitter",
-    "website_url":"https://splittertip.vercel.app/"
+    "screenshot_url": "https://raw.githubusercontent.com/ogabrielrodrigues/splitter/main/images/splitter.svg",
+    "github_url": "https://github.com/ogabrielrodrigues/splitter",
+    "website_url": "https://splittertip.vercel.app/"
   },
   {
     "title": "Expert Notes",
     "description": "Desenvolvido durante o NLW Expert 2024, Expert Notes é uma aplicação onde o usuário pode escrever suas notas, ou gravar um áudio e o site ficará encarregado de transcrever a gravação para texto.",
-    "screenshot_url":"https://raw.githubusercontent.com/ogabrielrodrigues/nlw-expert/main/expert-notes/.github/expert-notes.svg",
-    "github_url":"https://github.com/ogabrielrodrigues/nlw-expert/tree/main/expert-notes",
-    "website_url":"https://notesexpert.vercel.app/"
+    "screenshot_url": "https://raw.githubusercontent.com/ogabrielrodrigues/nlw-expert/main/expert-notes/.github/expert-notes.svg",
+    "github_url": "https://github.com/ogabrielrodrigues/nlw-expert/tree/main/expert-notes",
+    "website_url": "https://notesexpert.vercel.app/"
   }
 ]
