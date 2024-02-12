@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.4.0",
     "@radix-ui/react-tooltip": "^1.0.6",
     "@types/node": "20.2.5",
     "@types/react": "18.2.8",
@@ -19,13 +18,10 @@
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
     "lucide-react": "^0.236.0",
-    "negotiator": "^0.6.3",
     "next": "^13.5.6",
     "postcss": "^8.4.33",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-markdown": "^8.0.7",
-    "server-only": "^0.0.1",
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "3.3.2",
     "tailwindcss-animate": "^1.0.6",
@@ -33,7 +29,6 @@
   },
   "devDependencies": {
     "@pretty-eslint/eslint-config": "^1.0.5",
-    "@types/negotiator": "^0.6.1",
     "prettier-plugin-tailwindcss": "^0.3.0"
   }
 }

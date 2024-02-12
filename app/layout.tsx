@@ -10,17 +10,14 @@ export const metadata = {
 
 interface RootProps {
   children: ReactNode
-  params: {
-    lang: string
-  }
 }
 
 const body = Body({ subsets: ['latin'], variable: '--font-body' })
 const mono = Mono({ subsets: ['latin'], weight: ['700'], variable: '--font-mono' })
 
-export default function RootLayout({ children, params }: RootProps) {
+export default function RootLayout({ children }: RootProps) {
   return (
-    <html lang={params.lang}>
+    <html>
       <body className={cn(mono.variable, body.variable, 'font-sans antialiased')}>{children}</body>
     </html>
   )
