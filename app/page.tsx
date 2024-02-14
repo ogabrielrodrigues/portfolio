@@ -80,8 +80,8 @@ export default async function RootPage() {
                       <a
                         href={process.env.NEXT_PUBLIC_CURRICULUM_URL}
                         rel="noreferrer"
-                        target="_blank"
                         className="cursor-pointer rounded-full p-3 transition-colors hover:bg-indigo-950/60"
+                        download
                       >
                         <FileCheck className="h-6 w-6 text-indigo-50 4xl:h-8 4xl:w-8" />
                       </a>
