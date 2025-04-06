@@ -1,4 +1,4 @@
-import { Link } from '@/components/social-link'
+import { Link } from '@/types/link'
 import { environment } from '@/types/environment'
 import { FileCheck, Github, Linkedin, Mouse } from 'lucide-react'
 
