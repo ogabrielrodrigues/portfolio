@@ -1,8 +1,0 @@
-{
-  "extends": ["next/core-web-vitals", "@pretty-eslint/eslint-config/react"],
-  "rules": {
-    "no-unused-vars": "off",
-    "no-undef": "off",
-    "import-helpers/order-imports": "off"
-  }
-}
