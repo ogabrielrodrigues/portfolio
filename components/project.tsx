@@ -1,50 +1,66 @@
-import { Project } from '@/types/project'
-import { ArrowUpRight, Github } from 'lucide-react'
-import Image from 'next/image'
+import { IconArrowUpRight, IconBrandGithub } from "@tabler/icons-react"
+import Image from "next/image"
+import type { Project } from "@/lib/projects"
 
 interface ProjectProps {
-  project: Project
+	project: Project
 }
 
 export default function ProjectCard({ project }: ProjectProps) {
-  return (
-    <div className="overflow-hidden rounded-md border border-zinc-200 bg-zinc-50">
-      <a referrerPolicy="no-referrer" target="_blank" rel="noreferrer" href={project.github_url} className="cursor-pointer">
-        <Image src={project.screenshot_url} alt={`${project.title} Screenshot`} width={800} height={800} quality={100} />
-      </a>
-      <div className="grid grid-rows-[min-content_max-content] gap-8 px-4 py-6">
-        <div>
-          <h2 className="text-2xl font-bold text-zinc-950">{project.title}</h2>
-          <p className="min-h-[200px] text-zinc-500">{project.description}</p>
-        </div>
+	return (
+		<div className="flex flex-col overflow-hidden rounded-md border border-border shadow-xl bg-background">
+			<a
+				className="cursor-pointer w-full flex justify-center-center"
+				href={project.githubUrl}
+				referrerPolicy="no-referrer"
+				rel="noreferrer"
+				target="_blank"
+			>
+				<Image
+					alt={`${project.title} Screenshot`}
+					className="w-auto md:w-full"
+					height={0}
+					src={project.screenshotUrl}
+					width={0}
+				/>
+			</a>
 
-        <div className="flex h-max flex-1 flex-col gap-4">
-          <a
-            translate="no"
-            href={project.github_url}
-            referrerPolicy="no-referrer"
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-1 font-semibold text-indigo-950 hover:underline"
-          >
-            <Github />
-            Github
-          </a>
+			<div className="flex-1 space-y-8 p-8">
+				<div>
+					<strong className="text-2xl font-title text-secondary">
+						{project.title}
+					</strong>
 
-          {project.website_url && (
-            <a
-              href={project.website_url}
-              referrerPolicy="no-referrer"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-1 font-semibold text-indigo-700 hover:underline"
-            >
-              <ArrowUpRight />
-              Ver Site
-            </a>
-          )}
-        </div>
-      </div>
-    </div>
-  )
+					<p className="h-60 text-muted text-justify">{project.description}</p>
+				</div>
+
+				<div className="flex flex-col gap-4">
+					<a
+						className="flex items-center gap-2 font-title text-secondary hover:underline underline-offset-2 transition-all"
+						href={project.githubUrl}
+						referrerPolicy="no-referrer"
+						rel="noreferrer"
+						target="_blank"
+						translate="no"
+					>
+						<IconBrandGithub />
+						Github
+					</a>
+
+					{project.websiteUrl && (
+						<a
+							className="flex items-center gap-2 font-title text-primary hover:underline underline-offset-2 transition-all"
+							href={project.websiteUrl}
+							referrerPolicy="no-referrer"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<IconArrowUpRight />
+							Ver
+						</a>
+					)}
+				</div>
+			</div>
+		</div>
+	)
 }

@@ -1,11 +1,11 @@
-export type Environment = {
-  linkedin_url: string
-  github_url: string
-  curriculum_url: string
-}
+import z from "zod"
 
-export const environment: Environment = {
-  linkedin_url: process.env.NEXT_PUBLIC_LINKEDIN_URL!,
-  github_url: process.env.NEXT_PUBLIC_GITHUB_URL!,
-  curriculum_url: process.env.NEXT_PUBLIC_CURRICULUM_URL!
-}
+const environmentSchema = z.object({
+	ENVIRONMENT: z.enum(["development", "production"]),
+	LINKEDIN_URL: z.string(),
+	GITHUB_URL: z.string(),
+	CURRICULUM_URL: z.string(),
+	PROJECTS_URL: z.string(),
+})
+
+export const environment = z.parse(environmentSchema, process.env)
