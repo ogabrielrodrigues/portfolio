@@ -4,8 +4,8 @@
     "description": "Um desafio proposto no BrutoHacka 2023, que consiste em uma plataforma onde os colaboradores podem deixar suas sugestões, ideias e reclamações. E com isso os administradores daquela unidade operacional podem responder esses feedbacks.",
     "screenshotUrl": "https://raw.githubusercontent.com/ogabrielrodrigues/portfolio/refs/heads/main/.github/feedz.svg",
     "projectColor": "bg-[#fff1f2] border-[#ffc9c9]",
-    "githubUrl": "https://github.com/ogabrielrodrigues/hackaton_minerva",
-    "websiteUrl": "https://minervafeedback.vercel.app/"
+    "githubUrl": "https://github.com/ogabrielrodrigues/feedz",
+    "websiteUrl": "https://minervafeedz.vercel.app"
   },
   {
     "title": "Gopportunities",
