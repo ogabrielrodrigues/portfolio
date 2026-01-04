@@ -6,6 +6,7 @@ export type Project = {
 	title: string
 	description: string
 	screenshotUrl: string
+	backgroundColor: string
 	githubUrl: string
 	websiteUrl: string
 }

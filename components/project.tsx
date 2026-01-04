@@ -16,13 +16,17 @@ export default function ProjectCard({ project }: ProjectProps) {
 				rel="noreferrer"
 				target="_blank"
 			>
-				<Image
-					alt={`${project.title} Screenshot`}
-					className="w-auto md:w-full"
-					height={0}
-					src={project.screenshotUrl}
-					width={0}
-				/>
+				<div
+					className={`flex items-center justify-center aspect-video w-full bg-[${project.backgroundColor}]`}
+				>
+					<Image
+						alt={`${project.title} Screenshot`}
+						className="w-auto"
+						height={0}
+						src={project.screenshotUrl}
+						width={0}
+					/>
+				</div>
 			</a>
 
 			<div className="flex-1 space-y-8 p-8">
