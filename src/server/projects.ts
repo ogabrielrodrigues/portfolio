@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises"
 import { resolve } from "node:path"
-import { environment } from "@/types/environment"
+import { environment } from "@/server/environment"
 
 export type Project = {
 	title: string

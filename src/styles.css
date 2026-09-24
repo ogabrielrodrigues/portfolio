@@ -1,10 +1,12 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/lilex";
+@import "@fontsource-variable/archivo/wdth.css";
 
 @theme inline {
-	--font-sans: var(--font-geist);
-	--font-title: var(--font-lilex);
-	--font-display: var(--font-archivo);
+	--font-sans: "Geist Variable", sans-serif;
+	--font-title: "Lilex Variable", monospace;
+	--font-display: "Archivo Variable", sans-serif;
 
 	--color-primary: oklch(51.1% 0.262 276.966);
 	--color-secondary: oklch(25.7% 0.09 281.288);

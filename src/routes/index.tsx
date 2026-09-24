@@ -1,15 +1,20 @@
 import { IconMouse2 } from "@tabler/icons-react"
-import Image from "next/image"
+import { createFileRoute } from "@tanstack/react-router"
 import logo from "@/assets/logo.svg"
 import Project from "@/components/project"
 import { SocialLink } from "@/components/social-link"
 import { links } from "@/lib/links"
-import { getProjects } from "@/lib/projects"
+import { getPortfolio } from "@/server/portfolio"
 
 const stack = ["Go", "Node.js", "React"]
 
-export default async function PortfolioPage() {
-	const projects = await getProjects()
+export const Route = createFileRoute("/")({
+	loader: () => getPortfolio(),
+	component: PortfolioPage,
+})
+
+function PortfolioPage() {
+	const { projects, urls } = Route.useLoaderData()
 
 	return (
 		<div>
@@ -18,7 +23,14 @@ export default async function PortfolioPage() {
 
 				<header className="relative flex items-center justify-between gap-4 px-[clamp(20px,4vw,56px)] py-7">
 					<div className="flex items-center gap-3">
-						<Image alt="Logo" className="size-8" src={logo} />
+						<img
+							alt="Logo"
+							className="size-8"
+							decoding="async"
+							height={32}
+							src={logo}
+							width={32}
+						/>
 						<span className="font-title text-sm tracking-[.02em] max-sm:hidden">
 							gabriel.rodrigues
 						</span>
@@ -62,7 +74,7 @@ export default async function PortfolioPage() {
 
 							<div className="flex flex-wrap items-center gap-2.5">
 								{links.map(link => (
-									<SocialLink key={link.reference} link={link} />
+									<SocialLink key={link.id} link={link} url={urls[link.id]} />
 								))}
 							</div>
 						</div>

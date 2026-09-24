@@ -1,7 +1,5 @@
 import { IconArrowUpRight, IconBrandGithub } from "@tabler/icons-react"
-import Image from "next/image"
-import type { Project } from "@/lib/projects"
-import { cn } from "@/lib/utils"
+import type { Project } from "@/server/projects"
 
 interface ProjectProps {
 	project: Project
@@ -19,17 +17,14 @@ export default function ProjectCard({ project, index }: ProjectProps) {
 				target="_blank"
 			>
 				<div
-					className={cn(
-						"flex items-center justify-center aspect-video w-full border-b",
-						project.projectColor,
-					)}
+					className={`flex items-center justify-center aspect-video w-full border-b ${project.projectColor}`}
 				>
-					<Image
+					<img
 						alt={`${project.title} Screenshot`}
 						className="w-3/5"
-						height={0}
+						decoding="async"
+						loading="lazy"
 						src={project.screenshotUrl}
-						width={0}
 					/>
 				</div>
 			</a>

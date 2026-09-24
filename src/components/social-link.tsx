@@ -1,20 +1,19 @@
 import type { Link } from "@/lib/links"
-import { cn } from "@/lib/utils"
 
 interface SocialLinkProps {
 	link: Link
+	url: string
 }
 
-export function SocialLink({ link }: SocialLinkProps) {
+export function SocialLink({ link, url }: SocialLinkProps) {
 	return (
 		<a
-			className={cn(
-				"flex items-center gap-2 rounded-full px-4.5 py-3 font-medium",
+			className={`flex items-center gap-2 rounded-full px-4.5 py-3 font-medium ${
 				link.highlight
 					? "bg-foreground text-hero transition-transform hover:-translate-y-0.5"
-					: "glass",
-			)}
-			href={link.url}
+					: "glass"
+			}`}
+			href={url}
 			rel="noreferrer"
 			target="_blank"
 			title={link.content}
