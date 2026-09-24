@@ -8,7 +8,7 @@ interface ProjectProps {
 
 export default function ProjectCard({ project, index }: ProjectProps) {
 	return (
-		<div className="flex flex-col overflow-hidden rounded-xl border border-border bg-background shadow-[0_20px_25px_-5px_rgb(0_0_0/0.08),0_8px_10px_-6px_rgb(0_0_0/0.08)] transition-transform duration-250 hover:-translate-y-1">
+		<div className="flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-[0_20px_25px_-5px_rgb(0_0_0/0.08),0_8px_10px_-6px_rgb(0_0_0/0.08)] transition-transform duration-250 hover:-translate-y-1">
 			<a
 				className="flex w-full cursor-pointer"
 				href={project.githubUrl}
@@ -35,18 +35,18 @@ export default function ProjectCard({ project, index }: ProjectProps) {
 						{String(index + 1).padStart(2, "0")}
 					</span>
 
-					<strong className="font-display text-2xl font-extrabold leading-[1.1] text-secondary [font-stretch:112%]">
+					<strong className="font-display text-2xl font-extrabold leading-[1.1] text-foreground [font-stretch:112%]">
 						{project.title}
 					</strong>
 
-					<p className="text-muted leading-[1.55] text-pretty">
+					<p className="text-muted-foreground leading-[1.55] text-pretty">
 						{project.description}
 					</p>
 				</div>
 
 				<div className="flex gap-5 border-t border-border pt-5">
 					<a
-						className="flex items-center gap-1.5 font-title font-bold text-secondary underline-offset-3 hover:underline"
+						className="flex items-center gap-1.5 font-title font-bold text-foreground underline-offset-3 hover:underline"
 						href={project.githubUrl}
 						referrerPolicy="no-referrer"
 						rel="noreferrer"
