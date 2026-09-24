@@ -4,34 +4,33 @@ import {
 	IconBrandLinkedin,
 	IconFileCv,
 } from "@tabler/icons-react"
-import { environment } from "@/types/environment"
 
 export type Link = {
+	id: "linkedin" | "github" | "curriculum"
 	content: string
 	reference: string
 	icon: Icon
-	url: string
 	highlight?: boolean
 }
 
 export const links: Link[] = [
 	{
+		id: "linkedin",
 		content: "Acesse meu linkedIn",
 		reference: "LinkedIn",
 		icon: IconBrandLinkedin,
-		url: environment.LINKEDIN_URL,
 		highlight: true,
 	},
 	{
+		id: "github",
 		content: "Acesse meu GitHub",
 		reference: "GitHub",
 		icon: IconBrandGithub,
-		url: environment.GITHUB_URL,
 	},
 	{
+		id: "curriculum",
 		content: "Veja meu curriculum",
 		reference: "Currículo",
 		icon: IconFileCv,
-		url: environment.CURRICULUM_URL,
 	},
 ]
