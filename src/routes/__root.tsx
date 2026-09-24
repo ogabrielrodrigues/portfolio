@@ -42,7 +42,7 @@ function RootLayout() {
 			<head>
 				<HeadContent />
 			</head>
-			<body className="font-sans antialiased max-w-svw min-h-svh bg-foreground text-secondary">
+			<body className="font-sans antialiased max-w-svw min-h-svh bg-background text-foreground">
 				<Outlet />
 				<SpeedInsights />
 				<Analytics />

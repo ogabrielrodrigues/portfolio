@@ -18,7 +18,7 @@ function PortfolioPage() {
 
 	return (
 		<div>
-			<section className="relative flex min-h-screen flex-col overflow-hidden bg-hero text-foreground">
+			<section className="relative flex min-h-screen flex-col overflow-hidden bg-hero text-hero-foreground">
 				<div className="pointer-events-none absolute inset-0 bg-grid" />
 
 				<header className="relative flex items-center justify-between gap-4 px-[clamp(20px,4vw,56px)] py-7">
@@ -36,7 +36,7 @@ function PortfolioPage() {
 						</span>
 					</div>
 
-					<div className="flex items-center gap-2.5 whitespace-nowrap rounded-full border border-foreground/18 bg-indigo-950/35 px-3.5 py-2 font-title text-[13px]">
+					<div className="flex items-center gap-2.5 whitespace-nowrap rounded-full border border-hero-foreground/18 bg-indigo-950/35 px-3.5 py-2 font-title text-[13px]">
 						<span className="size-2 shrink-0 rounded-full bg-status animate-status" />
 						<span>Aberto a oportunidades</span>
 					</div>
@@ -51,7 +51,7 @@ function PortfolioPage() {
 						<span className="block">Desenvolvedor</span>
 						<span className="flex items-center gap-[.25em]">
 							<span className="text-outline">Web</span>
-							<span className="h-[.09em] min-w-10 flex-1 bg-linear-to-r from-foreground to-transparent" />
+							<span className="h-[.09em] min-w-10 flex-1 bg-linear-to-r from-hero-foreground to-transparent" />
 						</span>
 					</h1>
 
@@ -62,8 +62,8 @@ function PortfolioPage() {
 									<span
 										className={
 											i === 0
-												? "rounded-md border border-accent bg-accent px-3 py-1.5 font-title text-[13px] font-bold text-hero"
-												: "rounded-md border border-foreground/14 bg-foreground/8 px-3 py-1.5 font-title text-[13px]"
+												? "rounded-md border border-highlight bg-highlight px-3 py-1.5 font-title text-[13px] font-bold text-hero"
+												: "rounded-md border border-hero-foreground/14 bg-hero-foreground/8 px-3 py-1.5 font-title text-[13px]"
 										}
 										key={tech}
 									>
@@ -97,7 +97,7 @@ function PortfolioPage() {
 					<span className="font-title text-sm text-primary">
 						{"// projetos"}
 					</span>
-					<h2 className="font-display text-[clamp(32px,5vw,64px)] font-black uppercase leading-[.95] tracking-[-.02em] text-secondary [font-stretch:125%]">
+					<h2 className="font-display text-[clamp(32px,5vw,64px)] font-black uppercase leading-[.95] tracking-[-.02em] text-foreground [font-stretch:125%]">
 						Meus melhores projetos
 					</h2>
 				</div>
