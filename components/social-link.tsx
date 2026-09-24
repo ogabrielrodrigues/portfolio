@@ -12,7 +12,7 @@ export function SocialLink({ link }: SocialLinkProps) {
 				"flex items-center gap-2 rounded-full px-4.5 py-3 font-medium",
 				link.highlight
 					? "bg-foreground text-hero transition-transform hover:-translate-y-0.5"
-					: "border border-foreground/30 transition-colors hover:bg-indigo-950/60",
+					: "glass",
 			)}
 			href={link.url}
 			rel="noreferrer"
