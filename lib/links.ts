@@ -11,24 +11,26 @@ export type Link = {
 	reference: string
 	icon: Icon
 	url: string
+	highlight?: boolean
 }
 
 export const links: Link[] = [
 	{
 		content: "Acesse meu linkedIn",
-		reference: "Linkedin",
+		reference: "LinkedIn",
 		icon: IconBrandLinkedin,
 		url: environment.LINKEDIN_URL,
+		highlight: true,
 	},
 	{
 		content: "Acesse meu GitHub",
-		reference: "Github",
+		reference: "GitHub",
 		icon: IconBrandGithub,
 		url: environment.GITHUB_URL,
 	},
 	{
 		content: "Veja meu curriculum",
-		reference: "Curriculum",
+		reference: "Currículo",
 		icon: IconFileCv,
 		url: environment.CURRICULUM_URL,
 	},

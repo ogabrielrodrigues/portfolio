@@ -1,9 +1,10 @@
 @import "tailwindcss";
-@plugin 'tailwindcss-animate';
+@plugin "tailwindcss-animate";
 
 @theme inline {
 	--font-sans: var(--font-geist);
 	--font-title: var(--font-lilex);
+	--font-display: var(--font-archivo);
 
 	--color-primary: oklch(51.1% 0.262 276.966);
 	--color-secondary: oklch(25.7% 0.09 281.288);
@@ -11,4 +12,49 @@
 	--color-foreground: oklch(93% 0.034 272.788);
 	--color-border: oklch(92% 0.004 286.32);
 	--color-muted: oklch(44.2% 0.017 285.786);
+
+	--color-hero: oklch(22% 0.08 281.288);
+	--color-accent: oklch(78% 0.13 277);
+	--color-comment: oklch(80% 0.1 277);
+	--color-status: oklch(80% 0.17 150);
+
+	--animate-status: status 2s infinite;
+
+	@keyframes status {
+		0%,
+		100% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.35;
+		}
+	}
+}
+
+@utility bg-hero {
+	background:
+		radial-gradient(
+			90% 70% at 85% 100%,
+			var(--color-primary) 0%,
+			transparent 70%
+		),
+		radial-gradient(60% 50% at 0% 0%, oklch(35% 0.15 279) 0%, transparent 70%),
+		var(--color-hero);
+}
+
+@utility bg-grid {
+	background-image:
+		linear-gradient(rgb(255 255 255 / 0.06) 1px, transparent 1px),
+		linear-gradient(90deg, rgb(255 255 255 / 0.06) 1px, transparent 1px);
+	background-size: 64px 64px;
+	mask-image: radial-gradient(
+		ellipse 80% 70% at 50% 40%,
+		#000 30%,
+		transparent 85%
+	);
+}
+
+@utility text-outline {
+	color: transparent;
+	-webkit-text-stroke: 0.025em var(--color-foreground);
 }

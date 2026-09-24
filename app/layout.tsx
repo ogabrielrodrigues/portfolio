@@ -1,7 +1,6 @@
-import { TooltipProvider } from "@radix-ui/react-tooltip"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Geist, Lilex } from "next/font/google"
+import { Archivo, Geist, Lilex } from "next/font/google"
 import type { PropsWithChildren } from "react"
 import { cn } from "@/lib/utils"
 import "./globals.css"
@@ -12,16 +11,22 @@ export const metadata: Metadata = {
 	description: "Portfolio by Gabriel Rodrigues",
 }
 
-const display = Geist({
+const sans = Geist({
 	subsets: ["latin"],
-	weight: ["400"],
+	weight: ["400", "500"],
 	variable: "--font-geist",
 })
 
-const bold = Lilex({
+const mono = Lilex({
 	subsets: ["latin"],
-	weight: ["700"],
+	weight: ["400", "700"],
 	variable: "--font-lilex",
+})
+
+const display = Archivo({
+	subsets: ["latin"],
+	axes: ["wdth"],
+	variable: "--font-archivo",
 })
 
 export default function RootLayout({ children }: PropsWithChildren) {
@@ -29,12 +34,13 @@ export default function RootLayout({ children }: PropsWithChildren) {
 		<html lang="pt-BR">
 			<body
 				className={cn([
+					sans.variable,
+					mono.variable,
 					display.variable,
-					bold.variable,
-					"font-sans antialiased max-w-svw min-h-svh text-md bg-foreground text-foreground",
+					"font-sans antialiased max-w-svw min-h-svh bg-foreground text-secondary",
 				])}
 			>
-				<TooltipProvider>{children}</TooltipProvider>
+				{children}
 				<SpeedInsights />
 				<Analytics />
 			</body>
