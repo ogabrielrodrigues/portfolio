@@ -20,7 +20,7 @@ export default function ProjectCard({ project, index }: ProjectProps) {
 					className={`flex items-center justify-center aspect-video w-full border-b ${project.projectColor}`}
 				>
 					<img
-						alt={`${project.title} Screenshot`}
+						alt={`Logo do projeto ${project.title}`}
 						className="w-3/5"
 						decoding="async"
 						loading="lazy"
@@ -35,9 +35,9 @@ export default function ProjectCard({ project, index }: ProjectProps) {
 						{String(index + 1).padStart(2, "0")}
 					</span>
 
-					<strong className="font-display text-2xl font-extrabold leading-[1.1] text-foreground [font-stretch:112%]">
+					<h3 className="font-display text-2xl font-extrabold leading-[1.1] text-foreground [font-stretch:112%]">
 						{project.title}
-					</strong>
+					</h3>
 
 					<p className="text-muted-foreground leading-[1.55] text-pretty">
 						{project.description}

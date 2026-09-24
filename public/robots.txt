@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ogabrielrodrigues.vercel.app/sitemap.xml

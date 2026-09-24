@@ -4,12 +4,34 @@ import logo from "@/assets/logo.svg"
 import Project from "@/components/project"
 import { SocialLink } from "@/components/social-link"
 import { links } from "@/lib/links"
+import { site } from "@/lib/site"
 import { getPortfolio } from "@/server/portfolio"
 
 const stack = ["Go", "Node.js", "React"]
 
 export const Route = createFileRoute("/")({
 	loader: () => getPortfolio(),
+	head: ({ loaderData }) => ({
+		scripts: [
+			{
+				type: "application/ld+json",
+				// "<" escaped so no value can close the <script> tag
+				children: JSON.stringify({
+					"@context": "https://schema.org",
+					"@type": "Person",
+					name: site.name,
+					url: `${site.url}/`,
+					image: `${site.url}${site.image.path}`,
+					jobTitle: "Desenvolvedor Web",
+					description: site.description,
+					knowsAbout: ["Go", "Node.js", "React"],
+					sameAs: loaderData
+						? [loaderData.urls.linkedin, loaderData.urls.github]
+						: [],
+				}).replace(/</g, "\\u003c"),
+			},
+		],
+	}),
 	component: PortfolioPage,
 })
 
@@ -24,7 +46,7 @@ function PortfolioPage() {
 				<header className="relative flex items-center justify-between gap-4 px-[clamp(20px,4vw,56px)] py-7">
 					<div className="flex items-center gap-3">
 						<img
-							alt="Logo"
+							alt="Logo de Gabriel Rodrigues"
 							className="size-8"
 							decoding="async"
 							height={32}
@@ -48,6 +70,7 @@ function PortfolioPage() {
 					</p>
 
 					<h1 className="font-display text-[clamp(32px,7.4vw,180px)] font-black uppercase leading-[.86] tracking-[-.02em] [font-stretch:125%]">
+						<span className="sr-only">Gabriel Rodrigues, </span>
 						<span className="block">Desenvolvedor</span>
 						<span className="flex items-center gap-[.25em]">
 							<span className="text-outline">Web</span>
