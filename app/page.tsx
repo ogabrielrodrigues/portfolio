@@ -1,54 +1,98 @@
 import { IconMouse2 } from "@tabler/icons-react"
+import Image from "next/image"
+import logo from "@/assets/logo.svg"
 import Project from "@/components/project"
 import { SocialLink } from "@/components/social-link"
 import { links } from "@/lib/links"
 import { getProjects } from "@/lib/projects"
+
+const stack = ["Go", "Node.js", "React"]
 
 export default async function PortfolioPage() {
 	const projects = await getProjects()
 
 	return (
 		<div>
-			<section className="relative h-screen flex items-center justify-center bg-linear-to-tr from-primary to-secondary">
-				<div>
-					<main className="flex flex-col items-center justify-center space-y-4 px-4 lg:px-0">
-						<p className="select-none self-start md:text-xl">
-							Olá 👋, sou Gabriel Rodrigues
-						</p>
+			<section className="relative flex min-h-screen flex-col overflow-hidden bg-hero text-foreground">
+				<div className="pointer-events-none absolute inset-0 bg-grid" />
 
-						<h1 className="text-center font-bold font-title text-4xl sm:text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl">
-							Desenvolvedor Web
-						</h1>
+				<header className="relative flex items-center justify-between gap-4 px-[clamp(20px,4vw,56px)] py-7">
+					<div className="flex items-center gap-3">
+						<Image alt="Logo" className="size-8" src={logo} />
+						<span className="font-title text-sm tracking-[.02em] max-sm:hidden">
+							gabriel.rodrigues
+						</span>
+					</div>
 
-						<div className="flex flex-col-reverse items-center justify-between gap-6 lg:w-full lg:flex-row">
-							<div className="flex items-center justify-center space-x-2">
+					<div className="flex items-center gap-2.5 whitespace-nowrap rounded-full border border-foreground/18 bg-indigo-950/35 px-3.5 py-2 font-title text-[13px]">
+						<span className="size-2 shrink-0 rounded-full bg-status animate-status" />
+						<span>Aberto a oportunidades</span>
+					</div>
+				</header>
+
+				<main className="relative flex flex-1 flex-col justify-center gap-[clamp(20px,3vw,36px)] px-[clamp(20px,4vw,56px)]">
+					<p className="select-none font-title text-[clamp(15px,1.4vw,20px)] text-comment">
+						{"// Olá 👋, sou Gabriel Rodrigues"}
+					</p>
+
+					<h1 className="font-display text-[clamp(32px,7.4vw,180px)] font-black uppercase leading-[.86] tracking-[-.02em] [font-stretch:125%]">
+						<span className="block">Desenvolvedor</span>
+						<span className="flex items-center gap-[.25em]">
+							<span className="text-outline">Web</span>
+							<span className="h-[.09em] min-w-10 flex-1 bg-linear-to-r from-foreground to-transparent" />
+						</span>
+					</h1>
+
+					<div className="mt-2 flex flex-wrap items-end justify-between gap-x-12 gap-y-7">
+						<div className="flex flex-col gap-5">
+							<div className="flex flex-wrap gap-2">
+								{stack.map((tech, i) => (
+									<span
+										className={
+											i === 0
+												? "rounded-md border border-accent bg-accent px-3 py-1.5 font-title text-[13px] font-bold text-hero"
+												: "rounded-md border border-foreground/14 bg-foreground/8 px-3 py-1.5 font-title text-[13px]"
+										}
+										key={tech}
+									>
+										{tech}
+									</span>
+								))}
+							</div>
+
+							<div className="flex flex-wrap items-center gap-2.5">
 								{links.map(link => (
 									<SocialLink key={link.reference} link={link} />
 								))}
 							</div>
-
-							<p className="text-center xsm:px-2 md:px-0 md:pl-28 md:pr-4 md:text-end md:text-xl lg:max-w-3xl xl:px-0 4xl:text-2xl">
-								Tenho 20 anos, sou técnico em Desenvolvimento de Sistemas e
-								minhas experiências englobam Node.js, React e Go.
-							</p>
 						</div>
-					</main>
 
-					<div className="absolute flex flex-col items-center space-y-2 bottom-8 left-1/2 -translate-x-1/2">
-						<IconMouse2 className="size-6 animate-bounce" />
-						<span>Role para baixo</span>
+						<p className="max-w-130 text-[clamp(17px,1.5vw,22px)] leading-[1.45] text-pretty text-[oklch(88%_0.04_272.788)]">
+							Tenho 20 anos, sou técnico em Desenvolvimento de Sistemas e minhas
+							experiências englobam Node.js, React e Go.
+						</p>
 					</div>
+				</main>
+
+				<div className="relative flex items-center justify-center gap-2.5 pt-10 pb-7 font-title text-[13px] text-[oklch(85%_0.05_272.788)]">
+					<IconMouse2 className="size-5.5 animate-bounce" />
+					<span>Role para baixo</span>
 				</div>
 			</section>
 
-			<section className="flex flex-col space-y-12 p-5 md:p-8">
-				<h1 className="text-center font-title font-bold text-4xl text-secondary">
-					Meus melhores projetos
-				</h1>
+			<section className="flex flex-col gap-12 px-[clamp(20px,4vw,56px)] py-[clamp(56px,8vw,112px)]">
+				<div className="mx-auto flex w-full max-w-6xl flex-col gap-3">
+					<span className="font-title text-sm text-primary">
+						{"// projetos"}
+					</span>
+					<h2 className="font-display text-[clamp(32px,5vw,64px)] font-black uppercase leading-[.95] tracking-[-.02em] text-secondary [font-stretch:125%]">
+						Meus melhores projetos
+					</h2>
+				</div>
 
-				<div className="grid lg:grid-cols-3 gap-4 lg:w-6xl lg:mx-auto">
-					{projects.map(project => (
-						<Project key={project.title} project={project} />
+				<div className="mx-auto grid w-full max-w-6xl grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5">
+					{projects.map((project, i) => (
+						<Project index={i} key={project.title} project={project} />
 					))}
 				</div>
 			</section>
